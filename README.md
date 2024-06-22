@@ -2,7 +2,7 @@
 
 ## Splash Raid
 
-Give a splash potion for raid farms
+Give a splash potion for ominous bottles
 
 ## License
 
