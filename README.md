@@ -27,7 +27,7 @@ This mod is licensed under the GNU General Public License v3.0. For more details
 
 ## Support
 
-For support, suggestions, or feedback, please join our community on ```jaai```. or submit an issue on our [GitHub repository](https://github.com/JaaiDead/SplashOminous).
+For support, suggestions, or feedback, please join our community on ```jaai.``` or submit an issue on our [GitHub repository](https://github.com/JaaiDead/SplashOminous).
 
 ## Contributing
 
