@@ -3,7 +3,7 @@
 	"package": "com.arcticquests.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"SplashMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -3,6 +3,9 @@ package com.arcticquests.raid;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +18,8 @@ public class SplashOminous implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	// This DefaultParticleType gets called when you want to use your particle in code.
-	public static final SimpleParticleType SPARKLE_PARTICLE = FabricParticleTypes.simple();
+	public static final SimpleParticleType OMINOUS_PARTICLE = FabricParticleTypes.simple();
+
 
 	//#particle_register_main
 	//#entrypoint
@@ -25,9 +29,8 @@ public class SplashOminous implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		LOGGER.info("Hello ME!");
-		
 		// Register our custom particle type in the mod initializer.
-		//TODO: Registry.register(Registries.PARTICLE_TYPE, Identifier.of(MOD_ID, "sparkle_particle"), SPARKLE_PARTICLE);
+		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(MOD_ID, "ominous_particle"), OMINOUS_PARTICLE);
 		
 	}
 }
