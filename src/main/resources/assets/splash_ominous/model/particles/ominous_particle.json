@@ -1,7 +1,5 @@
-
 {
-    "textures": [
-      "splash_ominous:ominous_particle"
-    ]
-  }
-  
+  "textures": [
+    "splash_ominous:ominous_particle_texture"
+  ]
+}

@@ -4,14 +4,13 @@ import com.arcticquests.raid.SplashOminous;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.minecraft.client.particle.OminousSpawningParticle;
+import net.minecraft.client.particle.EndRodParticle;
 
 public class SplashOminousClient implements ClientModInitializer {
  
     @Override
     public void onInitializeClient() {
-
-    ParticleFactoryRegistry.getInstance().register(SplashOminous.OMINOUS_PARTICLE, OminousSpawningParticle.Factory::new);
+    ParticleFactoryRegistry.getInstance().register(SplashOminous.OMINOUS_PARTICLE, EndRodParticle.Factory::new);
 
 }
 }
