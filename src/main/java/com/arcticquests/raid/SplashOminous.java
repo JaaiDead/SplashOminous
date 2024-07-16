@@ -10,7 +10,6 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.arcticquests.raid.items.ModPots;
 
 public class SplashOminous implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -33,8 +32,6 @@ public class SplashOminous implements ModInitializer {
 		
 		LOGGER.info("Hello ME!");
 		
-		ModPots.registerPotionItem();		
-		ModPots.registerPotionRecipes();
 		// Register our custom particle type in the mod initializer.
 		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(MOD_ID, "ominous_particle"), OMINOUS_PARTICLE);
 		
