@@ -3,7 +3,7 @@
 	"package": "com.arcticquests.raid.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"SplashMixin"
+		"BrewingRecipeRegistryMixin1"
 	],
 	"injectors": {
 		"defaultRequire": 1

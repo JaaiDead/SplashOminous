@@ -33,7 +33,7 @@ public class SplashOminous implements ModInitializer {
 		LOGGER.info("Hello ME!");
 
 		Brewing.registerModItems();
-		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(SplashOminous.MOD_ID, "ominous_particle"), OMINOUS_PARTICLE);
+		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(MOD_ID, "ominous_particle"), OMINOUS_PARTICLE);
 		
 	}
 }
