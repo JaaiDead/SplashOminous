@@ -5,7 +5,6 @@ import com.arcticquests.raid.SplashOminous;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;
@@ -23,23 +22,32 @@ public class ModPots {
 
         return Registry.register(Registries.POTION, Identifier.of(SplashOminous.MOD_ID, name),new Potion(new StatusEffectInstance(StatusEffects.BAD_OMEN, 1600, 5)));
     }
-	
-	public static void registerPotionRecipe(RegistryEntry<Potion> input, Ingredient ingredient, RegistryEntry<Potion> output) {
-		
-        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
-			builder.registerItemRecipe(
-					// Input potion.
-					Items.OMINOUS_BOTTLE,
-					// Ingredient
-					Items.GUNPOWDER,
-					// Output potion.
-					RegistryEntry.of(SPLASH_OMINOUS_BOTTLE)
-			);
-		});
+
+	@SuppressWarnings("unchecked")
+	public static void registerPotionRecipes(){
 
         FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+			try {
+				builder.registerPotionRecipe(
+					
+						(RegistryEntry<Potion>) // Input potion.
+						Items.OMINOUS_BOTTLE,
+						// Ingredient
+						Items.GUNPOWDER,
+
+						// Output potion.
+						RegistryEntry.of(SPLASH_OMINOUS_BOTTLE)
+				);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new AssertionError("Must be implemented via interface injection");
+			}
+		});
+
+        /*FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(
 				
+					(RegistryEntry<Potion>)
 					// Input potion.
 					Potion.SPLASH_OMINOUS_BOTTLE,
 					// Ingredient
@@ -47,11 +55,11 @@ public class ModPots {
 					// Output potion.
 					RegistryEntry.of(LINGERING_OMINOUS_BOTTLE)
 			);
-		});
+		});*/
 	}
 
     public static void registerPotionItem(){
-        System.out.println("Registering Potions For " + SplashOminous.MOD_ID); // + registerPotion(name)
+        System.out.println("Registering Potions For " + SplashOminous.MOD_ID);
     }
 
    
