@@ -1,8 +1,5 @@
 package com.arcticquests.raid.mixin;
 
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
@@ -17,17 +14,19 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Pair;
 import org.spongepowered.asm.mixin.Debug;
+import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-
 @Mixin(BrewingRecipeRegistry.class)
 @Debug(export = true)
 public class BrewingRecipeRegistryMixin1 {
 
+    public static Object BUILD;
     @Unique
     HashMap<Pair<Item, Ingredient>, RegistryEntry<Potion>> recipes = new HashMap<>() {{
         put(new Pair<>(Items.SPLASH_POTION, Ingredient.ofItems(Items.GOLD_INGOT)), Potions.HARMING);
