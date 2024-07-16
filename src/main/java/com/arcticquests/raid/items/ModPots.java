@@ -8,8 +8,6 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
-import net.minecraft.potion.Potions;
-import net.minecraft.recipe.BrewingRecipeRegistry;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -18,21 +16,16 @@ import net.minecraft.util.Identifier;
 
 
 public class ModPots {
-
-    public static Potion SPLASH_OMINOUS_BOTTLE;
-    public static Potion LINGERING_OMINOUS_BOTTLE;
+	public static  Potion SPLASH_OMINOUS_BOTTLE;
+    public static  Potion LINGERING_OMINOUS_BOTTLE;
 
     public static Potion registerPotion (String name){
 
         return Registry.register(Registries.POTION, Identifier.of(SplashOminous.MOD_ID, name),new Potion(new StatusEffectInstance(StatusEffects.BAD_OMEN, 1600, 5)));
     }
-   
-    public static void registerPotionItem(){
-        System.out.println("Registering Potions For " + SplashOminous.MOD_ID);
-    }
-
-    private static void registerPotionRecipes(){
-
+	
+	public static void registerPotionRecipe(RegistryEntry<Potion> input, Ingredient ingredient, RegistryEntry<Potion> output) {
+		
         FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerItemRecipe(
 					// Input potion.
@@ -40,15 +33,16 @@ public class ModPots {
 					// Ingredient
 					Items.GUNPOWDER,
                     
-					(Item) // Output potion.
+					// Output potion.
 					RegistryEntry.of(SPLASH_OMINOUS_BOTTLE)
 			);
 		});
+
         FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(
-
+				
 					// Input potion.
-					Potions.SPLASH_OMINOUS_BOTTLE,
+					Potion.SPLASH_OMINOUS_BOTTLE,
 					// Ingredient
 					Items.DRAGON_BREATH,
 					// Output potion.
@@ -56,6 +50,12 @@ public class ModPots {
 			);
 		});
 	}
+
+    public static void registerPotionItem(){
+        System.out.println("Registering Potions For " + SplashOminous.MOD_ID);
+    }
+
+   
 }
 
 

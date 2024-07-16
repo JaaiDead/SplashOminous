@@ -1,4 +1,7 @@
 
 {
+    "item.splash_ominous.splash_ominous_bottle" : "Splash Ominous Bottle",
+    "item.splash_ominous.lingering_ominous_bottle" : "Lingering Ominous Bottle",
+
     "entity.splash_ominous.ominous_particle": "Ominous Particle"
 }

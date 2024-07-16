@@ -32,8 +32,9 @@ public class SplashOminous implements ModInitializer {
 		// Proceed with mild caution.
 		
 		LOGGER.info("Hello ME!");
-
+		
 		ModPots.registerPotionItem();		
+		ModPots.registerPotionRecipe();
 		// Register our custom particle type in the mod initializer.
 		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(MOD_ID, "ominous_particle"), OMINOUS_PARTICLE);
 		
