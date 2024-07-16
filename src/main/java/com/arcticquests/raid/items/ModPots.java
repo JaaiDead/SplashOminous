@@ -32,7 +32,6 @@ public class ModPots {
 					Items.OMINOUS_BOTTLE,
 					// Ingredient
 					Items.GUNPOWDER,
-                    
 					// Output potion.
 					RegistryEntry.of(SPLASH_OMINOUS_BOTTLE)
 			);
@@ -52,7 +51,7 @@ public class ModPots {
 	}
 
     public static void registerPotionItem(){
-        System.out.println("Registering Potions For " + SplashOminous.MOD_ID);
+        System.out.println("Registering Potions For " + SplashOminous.MOD_ID); // + registerPotion(name)
     }
 
    
