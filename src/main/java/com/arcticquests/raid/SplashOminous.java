@@ -10,6 +10,8 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.arcticquests.raid.brewpotz.Brewing;
+
 
 public class SplashOminous implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -21,9 +23,7 @@ public class SplashOminous implements ModInitializer {
 	// This DefaultParticleType gets called when you want to use your particle in code.
 	public static final SimpleParticleType OMINOUS_PARTICLE = FabricParticleTypes.simple();
 
-
-	//#particle_register_main
-	//#entrypoint
+	
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -31,9 +31,9 @@ public class SplashOminous implements ModInitializer {
 		// Proceed with mild caution.
 		
 		LOGGER.info("Hello ME!");
-		
-		// Register our custom particle type in the mod initializer.
-		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(MOD_ID, "ominous_particle"), OMINOUS_PARTICLE);
+
+		Brewing.registerModItems();
+		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(SplashOminous.MOD_ID, "ominous_particle"), OMINOUS_PARTICLE);
 		
 	}
 }
