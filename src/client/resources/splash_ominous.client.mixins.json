@@ -3,7 +3,7 @@
 	"package": "com.arcticquests.mixin.client",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"ESplashClientMixin"
+		"SplashClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
