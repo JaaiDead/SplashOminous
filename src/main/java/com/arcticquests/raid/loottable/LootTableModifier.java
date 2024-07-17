@@ -8,8 +8,8 @@ import net.minecraft.util.Identifier;
 
 public class LootTableModifier {
 
-  private static final Identifier YOUR_ENTITY_ID = Identifier.of(namespace, "entities/your_entity");
-  private static final Identifier YOUR_ITEM_ID = Identifier.of(namespace, item);
+  private static final Identifier YOUR_ENTITY_ID = Identifier.of("namespace", "entities/your_entity");
+  private static final Identifier YOUR_ITEM_ID = Identifier.of("namespace", "item");
 
   public static void modifyLootTables() {
       LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
