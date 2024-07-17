@@ -1,6 +1,6 @@
 
 {
     "item.minecraft.potion.effect.ominous_potion" : "Splash Ominous Bottle",
-    "item.minecraft.potion.splash_potion.effect.ominous_potion" : "Splash Ominous Bottle",
-    "item.minecraft.potion.lingering_potion.effect.ominous_potion" : "Lingering Ominous Bottle"
+    "item.minecraft.splash_potion.effect.ominous_potion" : "Splash Ominous Bottle",
+    "item.minecraft.lingering_potion.effect.ominous_potion" : "Lingering Ominous Bottle"
 }
