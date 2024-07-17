@@ -10,7 +10,8 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.arcticquests.raid.brewpotz.Brewing;
+import com.arcticquests.raid.item.Modpotion;
+
 
 
 public class SplashOminous implements ModInitializer {
@@ -29,9 +30,8 @@ public class SplashOminous implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		LOGGER.info("Hello ME!");
-		Brewing.registerModItems();
+		LOGGER.info("Hello Modding Awayyyyy!");
 		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(MOD_ID, "ominous_particle"), OMINOUS_PARTICLE);
-		
+		Modpotion.registerPotions();
 	}
 }
