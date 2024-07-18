@@ -22,7 +22,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"splash_ominous" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

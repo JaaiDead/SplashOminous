@@ -1,41 +1,35 @@
+
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "splash_ominous",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Splash Ominous",
+	"description": "Splash raid bottles as mush as you like! ",
 	"authors": [
-		"Me!"
+		"JaaiDead"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/JaaiDead",
+		"sources": "https://github.com/JaaiDead/SplashOminous"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "GNU General Public License v3.0",
+	"icon": "assets/splash_ominous/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.arcticquests.raid.SplashOminous"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.arcticquests.pills.SplashOminousClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"splash_ominous.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
