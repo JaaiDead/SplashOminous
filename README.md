@@ -2,12 +2,11 @@
 
 ## Overview
 
-Splash Ominous is a Minecraft mod that introduces a new feature to the game: the ability to create splash potions from ominous bottles. This mod adds an exciting layer of strategy and utility, allowing players to harness the power of ominous bottles in a new and dynamic way.
+Splash Ominous is a mod that introduces a new feature to the game: the ability to create splash potions from ominous bottles. This mod adds an exciting layer of strategy and utility, allowing players to harness the power of ominous bottles in a new and dynamic way.
 
 ## Features
 
 - **Splash Potion Creation**: Convert ominous bottles into splash potions, enabling a range of strategic options during gameplay.
-- **Easy Integration**: Seamlessly integrates with Minecraft's existing potion mechanics, offering a straightforward and intuitive user experience.
 
 ## Getting Started
 
