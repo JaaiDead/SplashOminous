@@ -17,12 +17,10 @@ public class Modpotion {
 
     public static Potion OMINOUS_POTION;
 
-    
-
     public static Potion registerPotion(String name) {
 
         return Registry.register(Registries.POTION,  Identifier.of(SplashOminous.MOD_ID, name),
-                new Potion(new StatusEffectInstance(StatusEffects.BAD_OMEN, 120000, 5)));
+                new Potion(new StatusEffectInstance(StatusEffects.BAD_OMEN, 120000, 4)));
     }
 
     public static void registerPotions() {
