@@ -9,7 +9,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
+
 import net.minecraft.util.Identifier;
 
 
@@ -17,10 +17,12 @@ public class Modpotion {
 
     public static Potion OMINOUS_POTION;
 
+    
+
     public static Potion registerPotion(String name) {
 
         return Registry.register(Registries.POTION,  Identifier.of(SplashOminous.MOD_ID, name),
-                new Potion(new StatusEffectInstance(StatusEffects.BAD_OMEN, 1200000, 5)));
+                new Potion(new StatusEffectInstance(StatusEffects.BAD_OMEN, 120000, 5)));
     }
 
     public static void registerPotions() {
@@ -41,7 +43,7 @@ public class Modpotion {
 					// Ingredient
 					Items.OMINOUS_BOTTLE,
 					// Output potion.
-					RegistryEntry.of(OMINOUS_POTION)
+					Registries.POTION.getEntry(OMINOUS_POTION)
 			);
 		});
     }
