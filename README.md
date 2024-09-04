@@ -43,7 +43,7 @@ For support, suggestions, or feedback,  submit an issue on our [GitHub repositor
 
 ## Contributing
 
-Contributions are welcome! If you're interested in improving Splash Ominous, please fork the repository and submit a pull request with your changes. For more details on how to contribute, please read our CONTRIBUTING.md file.
+Contributions are welcome! If you're interested in improving Splash Ominous, please fork the repository and submit a pull request with your changes.
 
 Thank you for your interest in Splash Ominous.
 
