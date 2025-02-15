@@ -1,0 +1,7 @@
+
+{
+    "item.minecraft.potion.effect.hunger_potion" : "Hunger Bottle",
+    "item.minecraft.splash_potion.effect.hunger_potion" : "Splash Hunger Bottle",
+    "item.minecraft.lingering_potion.effect.hunger_potion" : "Lingering Hunger Bottle"
+}
+}

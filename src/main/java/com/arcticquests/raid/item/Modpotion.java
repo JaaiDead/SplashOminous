@@ -1,6 +1,6 @@
 package com.arcticquests.raid.item;
 
-import com.arcticquests.raid.SplashOminous;
+import com.arcticquests.raid.SplashHunger;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -15,19 +15,22 @@ import net.minecraft.util.Identifier;
 
 public class Modpotion {
 
-    public static Potion OMINOUS_POTION;
+    public static Potion HUNGER_POTION;
 
     public static Potion registerPotion(String name) {
 
-        return Registry.register(Registries.POTION,  Identifier.of(SplashOminous.MOD_ID, name),
-                new Potion(new StatusEffectInstance(StatusEffects.BAD_OMEN, 120000, 4)));
+        return Registry.register(Registries.POTION,  Identifier.of(SplashHunger.MOD_ID, name),
+                new Potion(name,
+                        new StatusEffectInstance(
+                                StatusEffects.SATURATION,
+                                12000,
+                                3)));
     }
 
     public static void registerPotions() {
-        OMINOUS_POTION = registerPotion("ominous_potion");
+        HUNGER_POTION = registerPotion("hunger");
         registerPotionRecipes();
-
-        System.out.println("Registering The Potion & Recipes For + " + SplashOminous.MOD_ID);
+        System.out.println("Registering The Potion & Recipes For + " + SplashHunger.MOD_ID);
 
     }
 
@@ -39,9 +42,9 @@ public class Modpotion {
 					// Input potion.
 					Potions.WATER,
 					// Ingredient
-					Items.OMINOUS_BOTTLE,
+					Items.BAKED_POTATO,
 					// Output potion.
-					Registries.POTION.getEntry(OMINOUS_POTION)
+					Registries.POTION.getEntry(HUNGER_POTION)
 			);
 		});
     }

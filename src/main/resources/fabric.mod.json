@@ -1,10 +1,10 @@
 
 {
 	"schemaVersion": 1,
-	"id": "splash_ominous",
+	"id": "splash_hunger",
 	"version": "${version}",
-	"name": "Splash Ominous",
-	"description": "Splash raid bottles as mush as you like! ",
+	"name": "Splash Hunger",
+	"description": "Splash hunger lol as mush as you like! ",
 	"authors": [
 		"JaaiDead"
 	],
@@ -13,14 +13,11 @@
 		"sources": "https://github.com/JaaiDead/SplashOminous"
 	},
 	"license": "GNU General Public License v3.0",
-	"icon": "assets/splash_ominous/icon.png",
+	"icon": "assets/splash_hunger/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.arcticquests.raid.SplashOminous"
-		],
-		"client": [
-			"com.arcticquests.pills.SplashOminousClient"
+			"com.arcticquests.raid.SplashHunger"
 		]
 	},
 	"mixins": [
