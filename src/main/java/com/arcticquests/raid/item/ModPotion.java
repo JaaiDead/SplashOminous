@@ -13,7 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 
-public class Modpotion {
+public class ModPotion {
 
     public static Potion OMINOUS_POTION;
 
